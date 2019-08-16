@@ -136,7 +136,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
     
     private func updateViews() {
         guard isViewLoaded else { return }
-        title = "Sol \(solDescription?.sol ?? 0)"
+        title = "Sol \(solDescription?.sol ?? 0)" 
     }
     
     private func loadImage(forCell cell: ImageCollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -177,6 +177,8 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
             }
         }
         
+        
+        //fetchOp - filterOp - cachedOp or completionOp
         filterOp.addDependency(fetchOp)
         cacheOp.addDependency(filterOp)
         completionOp.addDependency(filterOp)
@@ -184,7 +186,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
         photoFetchQueue.addOperation(fetchOp)
         photoFetchQueue.addOperation(cacheOp)
         imageFilteringQueue.addOperation(filterOp)
-        OperationQueue.main.addOperation(completionOp)
+        OperationQueue.main.addOperation(completionOp)   //running this in main since it deals with UI
         
         operations[photoReference.id] = fetchOp
     }

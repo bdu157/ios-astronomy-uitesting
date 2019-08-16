@@ -115,6 +115,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gd-7b-dyz">
                                                 <rect key="frame" x="72.333333333333343" y="0.0" width="270.66666666666663" height="20.333333333333332"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="PhotoDetailViewController.CameraLabel"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

@@ -136,7 +136,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
     
     private func updateViews() {
         guard isViewLoaded else { return }
-        title = "Sol \(solDescription?.sol ?? 0)"
+        title = "Sol \(solDescription?.sol ?? 0)" 
     }
     
     private func loadImage(forCell cell: ImageCollectionViewCell, forItemAt indexPath: IndexPath) {
